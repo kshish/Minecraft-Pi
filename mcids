@@ -1,0 +1,15 @@
+import mcpi.minecraft as minecraft
+import mcpi.block as block
+import time
+
+#use default address and port
+#mc = minecraft.Minecraft.create()
+#specify ip address and port
+mc = minecraft.Minecraft.create("192.168.1.28", 4711)
+
+#get the entity id's of the players connected to the game
+entityIds = mc.getPlayerEntityIds()
+for entityId in entityIds:
+    print (entityId)
+    mc.entity.setPos(entityId,0,0,0)
+mc.postToChat("Hello Sylas")
