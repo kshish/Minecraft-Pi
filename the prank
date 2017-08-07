@@ -1,0 +1,102 @@
+from mcpi.minecraft import Minecraft
+import random
+from time import sleep
+running = True
+while running:
+    choice = input("type choices 1-6")
+    if choice == "2":
+        bob = input("type world number >")
+        mc = Minecraft.create(bob)
+        x, y, z = mc.player.getPos()
+        
+       
+        fat2 = input("type block num. tnt(46,1) water(9,8) lava(10,8) cobweb(30)")
+        fat = input("type block num. tnt(46,1) water(9,8) lava(10,8) cobweb(30)")
+        mc.setBlocks(x,y,z,x+20,y-20,z+20,int(fat2),int(fat))
+            
+
+
+    elif choice == "1":
+        mc = Minecraft.create()
+        x, y, z = mc.player.getPos()
+        bob = input("type world number >")
+        mc = Minecraft.create(bob)
+        fat2 = input("type block num. tnt(46,1) water(9,8) lava(10,8) cobweb(30)")
+        fat = input("type block num. tnt(46,1) water(9,8) lava(10,8) cobweb(30)")
+        mc.setBlocks(x,y,z,x+20,y-10,z+20,int(fat2),int(fat))
+    
+
+
+    elif choice == "3":
+        bob = input("type world number >")
+        mc = Minecraft.create(bob)
+        x, y, z = mc.player.getPos()
+        mc = Minecraft.create()
+        mc.player.setPos(x,y,z)
+
+
+
+
+
+    elif choice == "4":
+        el = 600
+        
+        mc = Minecraft.create()
+        x, y, z = mc.player.getPos()
+
+        bob = input("type world number >")
+        mc = Minecraft.create(bob)
+        mc.player.setPos(x,y,z)
+        el = el - 1
+
+
+
+    elif choice == "5":
+        bob1 = input("type world number >")
+        bob = input("say your part")
+        mc = Minecraft.create(bob1)
+        mc.postToChat(bob)
+
+
+
+
+
+
+    elif choice == "6":
+        bob = input("type world number >")
+        mc = Minecraft.create(bob)
+        Fat = input("type block number.")
+        Fat2 = input("type second block number.")
+        time = input("type how long (in seconds with no decimals.)")
+        time = int(time)
+        time = time * 10
+        while time > 0:
+            mc = Minecraft.create("zimbabwe")
+            x, y, z = mc.player.getPos()
+            mc = Minecraft.create(bob)
+    
+
+            tnt = 0
+            bed = 0
+            mc.setBlocks(x-5,y-5,z-5,x+5,y+5,z+5,int(Fat),int(Fat2))
+            mc.setBlocks(x-3,y-3,z-3,x+4,y+4,z+4,0,0)
+            time = time - 1
+    
+
+
+
+    elif choice == "6":
+        bob = input("type world number >")
+        Fat = input("type block number.")
+        Fat2 = input("type second block number.")
+        time = input("type how long (in seconds with no decimals.)")
+        time = int(time)
+        time = time * 10
+        while time > 0:
+            mc = Minecraft.create(localhost)
+            x, y, z = mc.player.getPos()
+            mc = Minecraft.create(bob)
+            mc.setBlocks(x-2, y-2, z-2, x+4, y+4, z+4, int(Fat), int(Fat2))
+            time = time - 1
+        
+        
