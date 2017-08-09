@@ -1,0 +1,9 @@
+from mcpi.minecraft import Minecraft
+mc = Minecraft.create()
+running = True
+while running:
+    x, y, z = mc.player.getPos()
+    blockType = mc.getBlock(x,y-1,z)
+    mc.postToChat(blockType)
+    if blockType == 20:
+        mc.setBlocks(x+20, y-2, z+2, x-20, y+2, z-2, 46, 1)
