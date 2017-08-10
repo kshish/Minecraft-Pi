@@ -12,10 +12,12 @@ while running:
 
     block = mc.getBlockWithData(x,y-1,z)
 
-
+    if y > 12:
+        mc.setBlock(0,-60,0,0)
+        
     if iD == 1 and block.id == 35 and block.data == 14:
         mc.setBlock(0, -60, 0, 0)
-
+    
     
 
     elif iD ==  0:
