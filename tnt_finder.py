@@ -7,6 +7,27 @@ WOOL=35
 running = True
 finding = False
 
+from mcpi.minecraft import Minecraft
+import random
+from time import sleep
+
+WOOL=35
+
+running = True
+finding = False
+
+mc = Minecraft.create()
+#specify ip address and port
+#mc = minecraft.Minecraft.create("192.168.1.28", 4711)
+from mcpi.minecraft import Minecraft
+import random
+from time import sleep
+
+WOOL=35
+
+running = True
+finding = False
+
 mc = Minecraft.create()
 #specify ip address and port
 #mc = minecraft.Minecraft.create("192.168.1.28", 4711)
@@ -35,6 +56,7 @@ while running:
     blockObj = mc.getBlockWithData(0,0,0)
     if blockObj.id==WOOL:
         if block.data==WHITE and finding==False:
-
-        
+            start_tnt_find()
+            finding=True
+        elif finding=True:
 
