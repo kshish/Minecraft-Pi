@@ -88,13 +88,22 @@ while running:
     global y
     global z
     global finding
+    standingOnWool=False
     x, y, z = mc.player.getPos()
     blockObj = mc.getBlockWithData(x,y-1,z)
-    if blockObj.id==WOOL and finding==False:
-        start_tnt_find()
-        finding=True
+    if blockObj.id==WOOL:
+        standingOnWool=True
+        if finding==False:
+            start_tnt_find()
+            finding=True
+            
+
+    
+    if standingOnWool==False:
+        finding=False
         
     if finding==True:
         tnt_find()
     print (finding)
     print(blockObj)
+
