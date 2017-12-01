@@ -78,12 +78,13 @@ def tnt_find():
     if tnt_y < pl_y:
         tnt_y=tnt_y+leap
         mc.setBlock(tnt_x, tnt_y+4, tnt_z, 46,1)
+        mc.setBlock(tnt_x, tnt_y-2, tnt_z, 35,1)
+
     if tnt_z > pl_z:
         tnt_z=tnt_z-leap
     if tnt_z < pl_z:
         tnt_z=tnt_z+leap
     mc.setBlock(tnt_x, tnt_y, tnt_z, 46,1)
-    mc.setBlock(tnt_x, tnt_y-2, tnt_z, 35,1)
         
 
 while running:
