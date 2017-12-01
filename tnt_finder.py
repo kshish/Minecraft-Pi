@@ -4,6 +4,7 @@ from time import sleep
 
 running = True
 finding = False
+debug = False
 
 mc = Minecraft.create()
 #specify ip address and port
@@ -81,6 +82,7 @@ def tnt_find():
     if tnt_z < pl_z:
         tnt_z=tnt_z+leap
     mc.setBlock(tnt_x, tnt_y, tnt_z, 46,1)
+    mc.setBlock(tnt_x, tnt_y-1, tnt_z, 35,1)
         
 
 while running:
@@ -93,17 +95,15 @@ while running:
     blockObj = mc.getBlockWithData(x,y-1,z)
     if blockObj.id==WOOL:
         standingOnWool=True
-        if finding==False:
-            start_tnt_find()
-            finding=True
-            
-
-    
-    if standingOnWool==False:
-        finding=False
+        if blockObj.data==0:
+            if finding==False:
+                start_tnt_find()
+                finding=True
+        if blockObj.data==7:
+            finding=False
         
     if finding==True:
         tnt_find()
-    print (finding)
-    print(blockObj)
-
+    if debug==True:
+        print (finding)
+        print(blockObj)
