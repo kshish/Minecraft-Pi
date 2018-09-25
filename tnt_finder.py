@@ -1,12 +1,5 @@
-from mcpi.minecraft import Minecraft
-import random
-from time import sleep
 
-running = True
-finding = False
-debug = False
 
-mc = Minecraft.create()
 #specify ip address and port
 #mc = minecraft.Minecraft.create("192.168.1.28", 4711)
 from mcpi.minecraft import Minecraft
@@ -15,6 +8,7 @@ from time import sleep
 
 WOOL=35
 
+debug = True
 running = True
 finding = False
 leap = 1
@@ -105,3 +99,4 @@ while running:
     if debug==True:
         print (finding)
         print(blockObj)
+
