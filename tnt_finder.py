@@ -1,4 +1,5 @@
-
+# stand on white wool to start tnt finder. tnt_finder draws tnt blocks from player to another player in same world.
+# stand on gray wool to stop tnt finder.
 
 #specify ip address and port
 #mc = minecraft.Minecraft.create("192.168.1.28", 4711)
